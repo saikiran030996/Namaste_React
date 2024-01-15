@@ -2,17 +2,29 @@ import React from 'react';
 import ReactDOM from "react-dom/client"
 
 
+// JSX => React.createElement => ReactElement-JS-Object => HTMLElement(render)
 
-const parent  = React.createElement(
-    'div',{id:'parent'},[React.createElement('div',{id:'child'},[React.createElement('h1',{},'This is Namaste React 🚀'),React.createElement("h2",{},'By Saikiran')]
-), React.createElement('div',{id:'child2'},[React.createElement('h1',{},'I am an h1 tag'),React.createElement("h2",{},'I am an h2 tag')])]); 
-        
-        
-        
-// JSX
+const Title = () => ( 
+<h1 id='Heading'>
+    Namaste React using JSX 🚆 🚀
+</h1> );
+const title = (
+<h1>
+    Namaste🙏
+</h1>
+)
+// React Functional Component
+ const number = 10000;
 
+const HeadingComponent = () => (
+    <div id="container"> 
 
-console.log(parent)
+    <h2>{"React is very important"}</h2>
+    <Title></Title>
+        <h3>Namaste{title} React Functional Component</h3>
+    </div>
+)
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+
+root.render(<HeadingComponent></HeadingComponent>);
